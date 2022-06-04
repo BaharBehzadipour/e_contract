@@ -16,7 +16,6 @@ class _CustomInputState extends State<CustomInput> {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      width: 390,
         child: Directionality(
           textDirection: TextDirection.rtl,
           child: TextField(
