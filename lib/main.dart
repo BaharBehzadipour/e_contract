@@ -1,6 +1,6 @@
 import 'package:e_contract/SignUp.dart';
 import 'package:flutter/material.dart';
-import 'package:e_contract/SinIn.dart';
+import 'package:e_contract/SignIn.dart';
 
 void main()=>runApp(MainMaterial());
 

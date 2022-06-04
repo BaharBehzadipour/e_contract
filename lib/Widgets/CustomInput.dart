@@ -11,7 +11,8 @@ class CustomInput extends StatefulWidget {
 }
 
 class _CustomInputState extends State<CustomInput> {
-  var usernameController=TextEditingController();
+  bool click=false;
+  var myController=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,10 @@ class _CustomInputState extends State<CustomInput> {
         child: Directionality(
           textDirection: TextDirection.rtl,
           child: TextField(
+            textDirection: TextDirection.ltr,
+            onTap: (){
+              click=!click;
+            },
             style: const TextStyle(
               color: Colors.black,
             ),
@@ -45,8 +50,10 @@ class _CustomInputState extends State<CustomInput> {
                   fontSize: 18,
                   fontFamily: "Iranyekan"
                 ),
-                hintText: widget.placeholder
+                hintText: widget.placeholder,
+
             ),
+            controller: myController,
 
           ),
         ),

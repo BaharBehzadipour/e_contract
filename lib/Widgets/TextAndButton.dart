@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TextAndButton extends StatefulWidget {
   final String mainText;
   final String clickableText;
-  final Function onClick;
+  final Widget onClick;
   const TextAndButton({Key? key,required this.mainText
   ,required this.clickableText, required this.onClick}) : super(key: key);
 
@@ -26,7 +26,28 @@ class _TextAndButtonState extends State<TextAndButton> {
               fontSize: 15,
             ),
           ),
-          onTap:(){ widget.onClick;},
+          onTap:(){
+            Navigator.of(context).push(PageRouteBuilder(
+                transitionDuration: Duration(seconds: 1),
+                pageBuilder: (BuildContext context,
+                    Animation<double> animation,
+                    Animation<double> secondAnimation) {
+                  return widget.onClick;
+                },
+                transitionsBuilder: (BuildContext context,
+                    Animation<double> animation,
+                    Animation<double> secondAnimation,
+                    Widget child) {
+                  return SlideTransition(
+                    child: child,
+                    position:
+                    Tween<Offset>(begin: Offset(1, 0), end: Offset(0, 0))
+                        .animate(CurvedAnimation(
+                        parent: animation,
+                        curve: Curves.fastOutSlowIn)),
+                  );
+                }));
+            },
         ),
         Padding(
           padding: EdgeInsets.only(left: 7),

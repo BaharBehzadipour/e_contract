@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:e_contract/Widgets/CustomInput.dart';
 import 'package:e_contract/Widgets/CustomButton.dart';
 import 'package:e_contract/Widgets/TextAndButton.dart';
+import 'SignIn.dart';
 
 class SinUp extends StatefulWidget {
   const SinUp({Key? key}) : super(key: key);
@@ -92,7 +93,7 @@ class _SinUpState extends State<SinUp> {
                   TextAndButton(
                     mainText: "حساب کاربری دارید؟",
                     clickableText: "ورود",
-                    onClick: (){},
+                    onClick: SignIn(),
                   ),
                 ],
               ),

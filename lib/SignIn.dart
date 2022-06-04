@@ -1,18 +1,19 @@
 import 'dart:ui';
+import 'package:e_contract/SignUp.dart';
 import 'package:e_contract/Widgets/CustomBackground.dart';
 import 'package:flutter/material.dart';
 import 'package:e_contract/Widgets/CustomInput.dart';
 import 'package:e_contract/Widgets/CustomButton.dart';
 import 'package:e_contract/Widgets/TextAndButton.dart';
 
-class SinIn extends StatefulWidget {
-  const SinIn({Key? key}) : super(key: key);
+class SignIn extends StatefulWidget {
+  const SignIn({Key? key}) : super(key: key);
 
   @override
-  _SinInState createState() => _SinInState();
+  _SignInState createState() => _SignInState();
 }
 
-class _SinInState extends State<SinIn> {
+class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -80,7 +81,7 @@ class _SinInState extends State<SinIn> {
                   TextAndButton(
                       mainText: "حساب کاربری ندارید؟",
                       clickableText: "ثبت نام",
-                  onClick: (){},
+                  onClick: SinUp(),
                   ),
                 ],
               ),
