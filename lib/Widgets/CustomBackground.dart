@@ -24,8 +24,6 @@ class _CustomBackgroundState extends State<CustomBackground> {
                   image: AssetImage("images/lineOfBackground.png"),
                   fit: BoxFit.fitWidth,
                   alignment: Alignment.topCenter,
-                  
-
                 )
               ),
               child: widget.up
@@ -33,6 +31,7 @@ class _CustomBackgroundState extends State<CustomBackground> {
           ) ,
           Container(
             height: MediaQuery.of(context).size.height * 0.60,
+            width: MediaQuery.of(context).size.width,
             child: widget.down,
 
             decoration: BoxDecoration(
