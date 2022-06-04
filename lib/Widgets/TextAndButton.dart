@@ -28,14 +28,17 @@ class _TextAndButtonState extends State<TextAndButton> {
           ),
           onTap:(){ widget.onClick;},
         ),
-        Text(
-            widget.mainText,
-            style: TextStyle(
-              color: Color.fromRGBO(162, 168, 183, 1),
-              fontFamily: "IranYekan" ,
-              fontSize: 15,
+        Padding(
+          padding: EdgeInsets.only(left: 7),
+          child: Text(
+              widget.mainText,
+              style: TextStyle(
+                color: Color.fromRGBO(162, 168, 183, 1),
+                fontFamily: "IranYekan" ,
+                fontSize: 15,
 
-            ),
+              ),
+          ),
         )
       ],
     );

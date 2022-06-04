@@ -1,3 +1,4 @@
+import 'package:e_contract/SignUp.dart';
 import 'package:flutter/material.dart';
 import 'package:e_contract/SinIn.dart';
 
@@ -10,10 +11,8 @@ class MainMaterial extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        // home: CustomCalendar(),
-        home:SinIn()
-      // home:Profile()
-      // home:Patogh()
+        home:SinUp()
+
     );
   }
 }

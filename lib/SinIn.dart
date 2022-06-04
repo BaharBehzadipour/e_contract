@@ -3,7 +3,6 @@ import 'package:e_contract/Widgets/CustomBackground.dart';
 import 'package:flutter/material.dart';
 import 'package:e_contract/Widgets/CustomInput.dart';
 import 'package:e_contract/Widgets/CustomButton.dart';
-import 'package:e_contract/Widgets/CustomBackground.dart';
 import 'package:e_contract/Widgets/TextAndButton.dart';
 
 class SinIn extends StatefulWidget {
@@ -79,7 +78,7 @@ class _SinInState extends State<SinIn> {
                 ),
               ),
                   TextAndButton(
-                      mainText: "حساب کابری ندارید؟",
+                      mainText: "حساب کاربری ندارید؟",
                       clickableText: "ثبت نام",
                   onClick: (){},
                   ),
